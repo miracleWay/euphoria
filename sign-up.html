@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="wrapper wrapper--zero-page">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/header/logo.svg" alt="" class="header__logo">
+                <form action="#" class="header__form form-header" enctype="multipart/form-data">
+                    <div class="form-header__search">
+                        <input type="text" class="form-header__input" placeholder="Search">
+                        <button class="form-header__button _icon-search"></button>
+                    </div>
+                    <div class="form-header__menu menu">
+                        <nav class="menu__body">
+                            <div class="menu__select">
+                                <select name="language">
+                                    <option value="english">English (united States)</option>
+                                    <option value="ukrainian">Ukrainian</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="french">French</option>
+                                </select>
+                            </div>
+                        </nav>
+                    </div>
+                </form>
+                <div class="header__buttons">
+                    <a href="sign-in.html" class="header__login header__login button">Login</a>
+                    <a href="sign-up.html" class="header__sign-up header__sign-up--not-active button">Sign Up</a>
+                </div>
+                <button class="icon-menu"><span></span></button>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__sign-up sign-up">
+                <div class="sign-up__container">
+                    <img src="img/sign-up/02.jpg" alt="image" class="sign-up__image">
+                    <div class="sign-up__body">
+                        <h1 class="sign-up__title">Sign Up</h1>
+                        <h6 class="sign-up__text">Sign up for free to access to in any of our products</h6>
+                        <div class="sign-up__continue">
+                            <button type="button" class="sign-up__sign sign-up__sign--google">Continue With
+                                Google</button>
+                            <button type="button" class="sign-up__sign sign-up__sign--twitter">Continue With
+                                Twitter</button>
+                        </div>
+                        <form method="get" action="#" enctype="multipart/form-data" class="sign-up__form form-sign">
+                            <div class="form-sign__wrapper">
+                                <div class="form-sign__header">
+                                    <label for="name" class="form-sign__label">Email Address</label>
+                                </div>
+                                <input type="text" class="form-sign__input" name="name" id="name" required>
+                                <div class="form-sign__error-msg">Error Message</div>
+                            </div>
+                            <div data-password class="form-sign__wrapper">
+                                <div class="form-sign__header">
+                                    <label for="password" class="form-sign__label">Password</label>
+                                    <button data-password-button type="button"
+                                        class="form-sign__hide-pass _icon-eye-dark">Show</button>
+                                </div>
+                                <input data-password-input type="password" class="form-sign__input" name="password"
+                                    id="password" required>
+                                <div class="form-sign__rule-password">Use 8 or more characters with a mix of letters,
+                                    numbers & symbols</div>
+                            </div>
+                            <div class="form-sign__wrapper">
+                                <div class="form-sign__checkbox">
+                                    <input id="agree" name="agree" value="yes" type="checkbox"
+                                        class="form-sign__square">
+                                    <label for="agree" class="form-sign__content">Agree to our Terms of use and Privacy
+                                        Policy
+                                    </label>
+                                </div>
+                                <div class="form-sign__checkbox">
+                                    <input id="subscribe" name="subscribe" value="yes" type="checkbox"
+                                        class="form-sign__square">
+                                    <label for="subscribe" class="form-sign__content">Subscribe to our monthly
+                                        newsletter
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="form-sign__button-sign button">Sign Up</button>
+                            <div class="form-sign__create">
+                                Already have an account? <a href="sign-in.html"> Log in</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Підключення JS-файлу з кодом -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

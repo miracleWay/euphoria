@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Sign In</title>
+</head>
+
+<body>
+    <div class="wrapper wrapper--zero-page">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/header/logo.svg" alt="" class="header__logo">
+                <form action="#" class="header__form form-header" enctype="multipart/form-data">
+                    <div class="form-header__search">
+                        <input type="text" class="form-header__input" placeholder="Search">
+                        <button class="form-header__button _icon-search"></button>
+                    </div>
+                    <div class="form-header__menu menu">
+                        <nav class="menu__body">
+                            <div class="menu__select">
+                                <select name="language">
+                                    <option value="english">English (united States)</option>
+                                    <option value="ukrainian">Ukrainian</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="french">French</option>
+                                </select>
+                            </div>
+                        </nav>
+                    </div>
+                </form>
+                <div class="header__buttons">
+                    <a href="sign-in.html" class="header__login header__login button">Login</a>
+                    <a href="sign-up.html" class="header__sign-up header__sign-up--not-active button">Sign Up</a>
+                </div>
+                <button class="icon-menu"><span></span></button>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__sign-in sign-in">
+                <div class="sign-in__container">
+                    <img src="img/sign-in/01.jpg" alt="image" class="sign-in__image">
+                    <div class="sign-in__body">
+                        <h1 class="sign-in__title">Sign In Page</h1>
+                        <div class="sign-in__continue">
+                            <button type="button" class="sign-in__sign sign-in__sign--google">Continue With
+                                Google</button>
+                            <button type="button" class="sign-in__sign sign-in__sign--twitter">Continue With
+                                Twitter</button>
+                        </div>
+                        <div class="sign-in__or">OR</div>
+                        <form action="#" method="get" enctype="multipart/form-data" class="sign-in__form form-sign">
+                            <div class="form-sign__wrapper">
+                                <div class="form-sign__header">
+                                    <label for="name" class="form-sign__label">User name or email address</label>
+                                </div>
+                                <input type="text" class="form-sign__input" name="name" id="name" required>
+                            </div>
+                            <div data-password class="form-sign__wrapper">
+                                <div class="form-sign__header">
+                                    <label for="password" class="form-sign__label">Password</label>
+                                    <button data-password-button type="button"
+                                        class="form-sign__hide-pass _icon-eye-dark">Show</button>
+                                </div>
+                                <input data-password-input type="password" class="form-sign__input" name="password"
+                                    id="password" required>
+                                <a href="reset-password.html" class="form-sign__forget">Forget your password</a>
+                            </div>
+                            <button type="submit" class="form-sign__button-sign button">Sign In</button>
+                            <div class="form-sign__create">
+                                Don’t have an account? <a href="sign-up.html">Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Підключення JS-файлу з кодом -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

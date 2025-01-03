@@ -1,0 +1,59 @@
+.page {
+    // .page__confirmed
+
+    &__confirmed {
+    }
+}
+.confirmed {
+    // .confirmed__container
+
+    &__container {
+        text-align: center;
+        @include adaptiveValue("padding-top", 100, 60);
+        @include adaptiveValue("padding-bottom", 100, 60);
+    }
+
+    // .confirmed__image
+
+    &__image {
+        display: inline-block;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: toRem(2);
+            height: toRem(20);
+            background-color: #d1d3d4;
+            transform: rotate(-45deg);
+            cursor: pointer;
+        }
+        &::before {
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 20%;
+        left: 57%;
+
+        @include adaptiveValue("padding-top", 16, 6, 1, 740, 320);
+        @include adaptiveValue("padding-bottom", 16, 6, 1, 740, 320);
+        @include adaptiveValue("padding-left", 20, 10, 1, 740, 320);
+        @include adaptiveValue("padding-right", 20, 10, 1, 740, 320);
+        @include adaptiveValue("font-size", 18, 10, 1, 740, 320);
+    }
+}

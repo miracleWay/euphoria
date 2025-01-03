@@ -1,0 +1,115 @@
+.page {
+    // .page__create-pass
+
+    &__create-pass {
+    }
+}
+.create-pass {
+    // .create-pass__container
+
+    &__container {
+        @extend .sign-in__container;
+    }
+
+    // .create-pass__image
+
+    &__image {
+        @extend .sign-in__image;
+    }
+
+    // .create-pass__title
+
+    &__title {
+        @extend .sign-in__title;
+        &:not(:last-child) {
+            margin-bottom: toRem(14);
+        }
+    }
+
+    // .create-pass__text
+
+    &__text {
+        @extend .sign-up__text;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 37, 24);
+        }
+    }
+
+    // .create-pass__form
+
+    &__form {
+        @extend .sign-in__form;
+    }
+
+    // .create-pass__body
+
+    &__body {
+        @extend .sign-in__body;
+    }
+}
+.form-sign {
+    // .form-sign__wrapper
+
+    &__wrapper {
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .form-sign__header
+
+    &__header {
+    }
+
+    // .form-sign__label
+
+    &__label {
+    }
+
+    &__field {
+        .form-sign__wrapper--inside & {
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: toRem(10);
+            }
+        }
+    }
+
+    // .form-sign__hide-pass
+
+    &__hide-pass {
+        .form-sign__wrapper--inside & {
+            position: absolute;
+            top: 50%;
+            right: toRem(21);
+            transform: translateY(-50%);
+        }
+    }
+
+    // .form-sign__input
+
+    &__input {
+        .form-sign__wrapper--inside & {
+            margin-bottom: toRem(0);
+        }
+    }
+
+    // .form-sign__rule-password
+
+    &__rule-password {
+    }
+
+    // .form-sign__error-msg
+
+    &__error-msg {
+        color: #ff0000;
+    }
+
+    // .form-sign__button-sign
+
+    &__button-sign {
+        &--create-pass {
+            padding: toRem(16) toRem(22);
+        }
+    }
+}

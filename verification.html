@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Verification</title>
+</head>
+
+<body>
+    <div class="wrapper wrapper--zero-page">
+        <header class="header">
+            <div class="header__container">
+                <img src="img/header/logo.svg" alt="" class="header__logo">
+                <form action="#" class="header__form form-header" enctype="multipart/form-data">
+                    <div class="form-header__search">
+                        <input type="text" class="form-header__input" placeholder="Search">
+                        <button class="form-header__button _icon-search"></button>
+                    </div>
+                    <div class="form-header__menu menu">
+                        <nav class="menu__body">
+                            <div class="menu__select">
+                                <select name="language">
+                                    <option value="english">English (united States)</option>
+                                    <option value="ukrainian">Ukrainian</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="french">French</option>
+                                </select>
+                            </div>
+                        </nav>
+                    </div>
+                </form>
+                <div class="header__buttons">
+                    <a href="sign-in.html" class="header__login header__login button">Login</a>
+                    <a href="sign-up.html" class="header__sign-up header__sign-up--not-active button">Sign Up</a>
+                </div>
+                <button class="icon-menu"><span></span></button>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__verification verification">
+                <div class="verification__container">
+                    <img src="img/verification/01.jpg" alt="image" class="verification__image">
+                    <div class="verification__body">
+                        <h1 class="verification__title">Verification</h1>
+                        <div class="verification__text">Verify your code.</div>
+                        <form enctype="multipart/form-data" action="#" method="get"
+                            class="verification__form form-verification">
+                            <div class="form-verification__wrapper">
+                                <div class="form-verification__header">
+                                    <label for="code" class="form-verification__label">Verification Code</label>
+                                </div>
+                                <input type="tel" class="form-verification__input" name="code" id="code" required>
+                            </div>
+                            <button class="form-verification__verify button" type="submit">Verify Code</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Підключення JS-файлу з кодом -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

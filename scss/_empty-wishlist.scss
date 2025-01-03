@@ -1,0 +1,124 @@
+.page {
+    // .page__breadcrumbs
+
+    &__breadcrumbs {
+    }
+
+    // .page__container
+
+    &__container {
+    }
+
+    // .page__container--grid
+
+    &__container--grid {
+        .wrapper--empty-wishlist & {
+            gap: toRem(126);
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 100, 60);
+            }
+        }
+    }
+
+    // .page__account
+
+    &__account {
+    }
+
+    // .page__empty-wishlist
+
+    &__empty-wishlist {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 100, 60);
+        }
+    }
+
+    // .page__recently-viewed
+
+    &__recently-viewed {
+    }
+}
+
+// EMPTY WISHLIST
+
+.empty-wishlist {
+    @include adaptiveValue("padding-top", 78, 38);
+    @include adaptiveValue("padding-bottom", 78, 38);
+    @include adaptiveValue("padding-left", 116, 22);
+    @include adaptiveValue("padding-right", 116, 22);
+    // padding: toRem(78) toRem(116);
+    text-align: center;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05),
+        -2px -2px 4px 0 rgba(0, 0, 0, 0.05);
+    max-width: toRem(693);
+    margin-inline: auto;
+
+    // .empty-wishlist__image
+
+    &__image {
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #f0f9f4;
+        // padding: toRem(54);
+        @include adaptiveValue("padding", 54, 24);
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 20);
+        }
+        &::before {
+            font-size: toRem(62);
+            color: #28a642;
+        }
+    }
+
+    // .empty-wishlist__title
+
+    &__title {
+        font-family: "CoreSans", sans-serif;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 34, 24);
+        color: $darkColor;
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+
+    // .empty-wishlist__text
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: toRem(42);
+        }
+        p {
+            font-weight: 500;
+            line-height: 1.25;
+        }
+    }
+
+    // .empty-wishlist__link
+
+    &__link {
+    }
+}
+
+// RECENTLY
+
+.recently-viewed {
+    // .recently-viewed__container
+
+    &__container {
+    }
+
+    // .recently-viewed__title
+
+    &__title {
+    }
+
+    // .recently-viewed__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(toRem(220), 1fr));
+        @include adaptiveValue("gap", 50, 20);
+    }
+}

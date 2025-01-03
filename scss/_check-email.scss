@@ -1,0 +1,67 @@
+.page {
+    // .page__check
+
+    &__check {
+    }
+}
+.check-email {
+    // .check-email__container
+
+    &__container {
+        @extend .sign-in__container;
+    }
+
+    // .check-email__image
+
+    &__image {
+        @extend .sign-in__image;
+    }
+
+    // .check-email__body
+
+    &__body {
+        @extend .sign-in__body;
+    }
+
+    // .check-email__title
+
+    &__title {
+        @extend .sign-in__title;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
+    }
+
+    // .check-email__text
+
+    &__text {
+        @extend .sign-up__text;
+        button {
+            color: $purpleColor;
+            font-weight: 700;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
+    }
+
+    // .check-email__login
+
+    &__login {
+        @extend .form-sign__create;
+        color: #807d7e;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        column-gap: toRem(4);
+        &::before {
+            font-size: toRem(8);
+            margin-right: toRem(15);
+        }
+    }
+}

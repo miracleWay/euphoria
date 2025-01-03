@@ -1,0 +1,253 @@
+%info-title {
+    font-weight: 700;
+    font-family: "CoreSans", sans-serif;
+    line-height: 1.2;
+    color: $darkColor;
+}
+%info-button {
+    font-weight: 600;
+    line-height: 1.2;
+    color: $darkColor;
+    @media (any-hover: hover) {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// SIDEBAR
+
+.page {
+    // .page__container
+
+    &__container {
+        &--grid {
+            @media (min-width: toEm(991.98)) {
+                display: grid;
+                grid-template-columns: toRem(295) auto;
+                gap: toRem(50);
+            }
+        }
+    }
+
+    // .page__account
+
+    &__account {
+        @media (max-width: toEm(991.98)) {
+            &:not(:last-child) {
+                margin-bottom: toRem(50);
+            }
+        }
+    }
+
+    // .page__my-info
+
+    &__my-info {
+    }
+}
+
+// CONTACT-DETAILS
+
+.my-info {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: toRem(27);
+        }
+    }
+    // .my-info__title
+
+    &__title {
+        @extend %info-title;
+        @include adaptiveValue("font-size", 28, 24);
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+
+    // .my-info__contact
+
+    &__contact {
+    }
+
+    // .my-info__address
+
+    &__address {
+    }
+}
+.contact-details {
+    // .contact-details__title
+
+    &__title {
+        @extend %info-title;
+        @include adaptiveValue("font-size", 22, 18);
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .contact-details__items
+
+    &__items {
+    }
+
+    // .contact-details__item
+
+    &__item {
+        border-bottom: toRem(1) solid #edeef2;
+        padding-bottom: toRem(20);
+        &:not(:first-child) {
+            padding-top: toRem(20);
+        }
+    }
+
+    // .contact-details__subtitle
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: toRem(18);
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .contact-details__data
+
+    &__data {
+        display: flex;
+        column-gap: toRem(20);
+        margin-left: toRem(-10);
+    }
+
+    // .contact-details__input
+
+    &__input {
+        font-weight: 600;
+        font-size: toRem(18);
+        color: $darkColor;
+        padding: toRem(10);
+        &--password {
+            letter-spacing: toRem(3);
+        }
+    }
+
+    // .contact-details__change
+
+    &__change {
+        @extend %info-button;
+        font-size: toRem(18);
+    }
+}
+
+// ADDRESS-DETAILS
+
+.address-details {
+    // .address__header
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        column-gap: toRem(20);
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .address__title
+
+    &__title {
+        @extend %info-title;
+        @include adaptiveValue("font-size", 22, 18);
+    }
+
+    // .address__add
+
+    &__add {
+        @extend %info-button;
+        font-size: toRem(18);
+    }
+
+    // .address__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
+        gap: toRem(25);
+    }
+
+    // .address__item
+
+    &__item {
+    }
+}
+.item-adress {
+    padding: toRem(25) toRem(43);
+    background-color: $liteColor;
+    border-radius: toRem(12);
+
+    display: grid;
+    gap: toRem(20);
+
+    // .item-adress__name
+
+    &__name {
+        font-weight: 600;
+        font-size: toRem(20);
+        color: $darkColor;
+    }
+
+    // .item-adress__phone
+
+    &__phone {
+        font-weight: 500;
+    }
+
+    // .item-adress__adress
+
+    &__adress {
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    // .item-adress__wrapper-label
+
+    &__wrapper-label {
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(12);
+    }
+
+    // .item-adress__label
+
+    &__label {
+        font-weight: 500;
+        padding: toRem(7) toRem(19);
+        border: toRem(2) solid $mainColor;
+        border-radius: toRem(8);
+    }
+
+    // .item-adress__buttons
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(10);
+        button {
+            line-height: 1;
+            @extend %info-button;
+            &:not(:last-child) {
+                border-right: toRem(1) solid #d9d9d9;
+                padding-right: toRem(10);
+            }
+        }
+    }
+
+    // .item-adress__remove
+
+    &__remove {
+    }
+
+    // .item-adress__edit
+
+    &__edit {
+    }
+}

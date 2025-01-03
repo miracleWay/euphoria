@@ -1,0 +1,79 @@
+.page {
+    // .page__verification
+
+    &__verification {
+    }
+}
+.verification {
+    // .verification__container
+
+    &__container {
+        @extend .sign-in__container;
+    }
+
+    // .verification__image
+
+    &__image {
+        @extend .sign-in__image;
+    }
+
+    // .verification__body
+
+    &__body {
+        @extend .sign-in__body;
+    }
+
+    // .verification__title
+
+    &__title {
+        @extend .sign-in__title;
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .verification__text
+
+    &__text {
+        @extend .sign-up__text;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
+    }
+
+    // .verification__form
+
+    &__form {
+    }
+}
+.form-verification {
+    // .form-verification__wrapper
+
+    &__wrapper {
+        @extend .form-sign__wrapper;
+    }
+
+    // .form-verification__header
+
+    &__header {
+        @extend .form-sign__header;
+    }
+
+    // .form-verification__label
+
+    &__label {
+        @extend .form-sign__label;
+    }
+
+    // .form-verification__input
+
+    &__input {
+        @extend .form-sign__input;
+    }
+
+    // .form-verification__verify
+
+    &__verify {
+        padding: toRem(16) toRem(38);
+    }
+}

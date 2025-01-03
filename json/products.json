@@ -1,0 +1,99 @@
+{
+    "products":[{
+        "id": 1,
+        "favourite": true,
+        "url": "product.html",
+        "image": "img/page-women/01.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Jhanvi’s  Brand",
+        "price": "$123.00"
+    }, {
+        "id": 2,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/02.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Helen’s  Brand",
+        "price": "$11.00"
+    }, {
+        "id": 3,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/03.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Nike’s  Brand",
+        "price": "$119.00"
+    }, {
+        "id": 4,
+        "favourite": true,
+        "url": "#",
+        "image": "img/page-women/04.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "paypal’s  Brand",
+        "price": "$77.00"
+    }, {
+        "id": 5,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/05.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "woden’s  Brand",
+        "price": "$29.00"
+    }, {
+        "id": 6,
+        "favourite": true,
+        "url": "#",
+        "image": "img/page-women/06.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "MM’s  Brand",
+        "price": "$37.00"
+    }, {
+        "id": 7,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/07.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Priya’s  Brand",
+        "price": "$77.00"
+    }, {
+        "id": 8,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/08.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "woden’s  Brand",
+        "price": "$29.00"
+    }, {
+        "id": 9,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/09.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "MM’s  Brand",
+        "price": "$37.00"
+    }, {
+        "id": 10,
+        "favourite": true,
+        "url": "#",
+        "image": "img/page-women/10.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Nisargi’s  Brand",
+        "price": "$77.00"
+    }, {
+        "id": 11,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/11.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "Mellon’s  Brand",
+        "price": "$29.00"
+    }, {
+        "id": 12,
+        "favourite": false,
+        "url": "#",
+        "image": "img/page-women/12.jpg", 
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolore.",
+        "label": "AS’s  Brand",
+        "price": "$37.00"
+    }]
+}

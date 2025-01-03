@@ -1,0 +1,87 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1270;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$mainColor: #807d7e;
+$darkColor: #3c4242;
+$purpleColor: #8a33fd;
+$liteColor: #f6f6f6;
+
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Іконки
+@import "_icons.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+@import "_common.scss";
+// noUiSlider
+@import "_noUiSlider.scss";
+// HEADER
+@import "_header.scss";
+// FOOTER
+@import "_footer.scss";
+// Pages
+@import "_home.scss";
+@import "_women.scss";
+@import "_product.scss";
+@import "_sign-in.scss";
+@import "_sign-up.scss";
+@import "_reset-password.scss";
+@import "_check-email.scss";
+@import "_verification.scss";
+@import "_new-pass.scss";
+@import "_cart-page.scss";
+@import "_checkout.scss";
+@import "_my-info.scss";
+@import "_add-address.scss";
+@import "_confirmed-order.scss";
+@import "_empty-cart.scss";
+@import "_wishlist.scss";
+@import "_empty-wishlist.scss";
+@import "_orders.scss";
+@import "_order-details.scss";
+@import "_error-page.scss";
+
+body {
+    font-family: "Causten";
+    color: $mainColor;
+    &.menu-open {
+        overflow: hidden;
+    }
+}
+.wrapper {
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.wrapper main {
+    flex-grow: 1;
+    > :last-child {
+        @include adaptiveValue("margin-bottom", 100, 60);
+    }
+}
+.page.page--margin {
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+[class*="__container"] {
+    max-width: toRem(1270);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    margin: 0 auto;
+}

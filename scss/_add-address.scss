@@ -1,0 +1,114 @@
+.page {
+    &__container {
+    }
+
+    // .page__info
+
+    &__info {
+    }
+}
+.info {
+    // .info__title
+
+    &__title {
+        @extend .my-info__title;
+    }
+
+    // .info__form
+
+    &__form {
+    }
+}
+.form-info {
+    // .form-info__title
+
+    &__title {
+        @extend .contact-details__title;
+    }
+
+    // .form-info__body
+
+    &__body {
+        @extend .billing__body;
+    }
+
+    // .form-info__wrapper
+
+    &__wrapper {
+        @extend .billing__wrapper;
+
+        &--textarea {
+            flex: 0 1 100%;
+        }
+    }
+
+    // .form-info__label
+
+    &__label {
+        @extend .billing__label;
+    }
+
+    // .form-info__input
+
+    &__input {
+        @extend .billing__input;
+    }
+
+    // .form-info__select
+
+    &__select {
+        @extend .billing__select;
+    }
+
+    // .form-info__textarea
+
+    &__textarea {
+        background-color: $liteColor;
+        padding: toRem(18) toRem(22);
+        border-radius: toRem(8);
+        min-height: toRem(150);
+        resize: vertical;
+        &:focus-visible::placeholder {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    }
+
+    // .form-info__checkbox
+
+    &__checkbox {
+        flex: 0 1 100%;
+        padding-left: toRem(19);
+        @extend .billing__save-info;
+    }
+
+    // .form-info__buttons
+
+    &__buttons {
+        padding-left: toRem(19);
+
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiveValue("column-gap", 30, 20);
+        @include adaptiveValue("row-gap", 20, 10);
+    }
+
+    // .form-info__save
+
+    &__save {
+    }
+
+    // .form-info__cancel
+
+    &__cancel {
+        background-color: $liteColor;
+        color: $mainColor;
+        font-weight: 700;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #e9e7e7;
+            }
+        }
+    }
+}

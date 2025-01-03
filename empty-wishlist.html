@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Wishlist - Euphoria</title>
+</head>
+
+<body>
+	<div class="wrapper wrapper--empty-wishlist">
+		<header class="header">
+			<div class="header__container">
+				<img src="img/header/logo.svg" alt="" class="header__logo">
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="index.html" class="menu__link">Shop</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Men</a>
+							</li>
+							<li class="menu__item">
+								<a href="women.html" class="menu__link">Women</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Combos</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Joggers</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<form action="#" class="header__form form-header" enctype="multipart/form-data">
+					<input type="text" class="form-header__input" placeholder="Search">
+					<button class="form-header__button _icon-search"></button>
+				</form>
+				<div class="header__action action-header">
+					<a href="#" class="action-header__item action-header__item--active _icon-favourite"></a>
+					<a href="#" class="action-header__item _icon-profile"></a>
+					<a href="cart-page.html" class="action-header__item _icon-cart"></a>
+				</div>
+				<button class="icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__breadcrumbs breadcrumbs breadcrumbs--margin breadcrumbs--padding">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item _icon-ch-right">
+							<a href="index.html" class="breadcrumbs__link">Home</a>
+						</li>
+						<li class="breadcrumbs__item _icon-ch-right">
+							<a href="#" class="breadcrumbs__link">My Account</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__target">Personal Info</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="page__container page__container--grid">
+				<aside class="page__account account">
+					<h2 class="account__title title">Hello Jhanvi</h2>
+					<div class="account__greeting">Welcome to your Account</div>
+					<nav class="account__sidebar sidebar">
+						<ul class="sidebar__list">
+							<li class="sidebar__item">
+								<a href="#" class="sidebar__link _icon-bag">My orders</a>
+							</li>
+							<li class="sidebar__item  sidebar__item--active">
+								<a href="#" class="sidebar__link _icon-favourite">Wishlist</a>
+							</li>
+							<li class="sidebar__item">
+								<a href="#" class="sidebar__link _icon-profile">My info</a>
+							</li>
+							<li class="sidebar__item">
+								<a href="#" class="sidebar__link _icon-sign-out">Sign out</a>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+				<div class="page__empty-wishlist empty-wishlist">
+					<div class="empty-wishlist__image _icon-favourite"></div>
+					<h1 class="empty-wishlist__title">Your wishlist is empty.</h1>
+					<div class="empty-wishlist__text">
+						<p>You don’t have any products in the wishlist yet. You will find a lot
+							of interesting products on our Shop page.</p>
+					</div>
+					<a href="women.html" class="empty-wishlist__link button">Continue Shopping</a>
+				</div>
+			</div>
+			<div class="page__recently-viewed recently-viewed">
+				<div class="recently-viewed__container">
+					<h2 class="recently-viewed__title title">Recently Viewed</h2>
+					<div class="recently-viewed__items">
+						<article class="item-product">
+							<a href="#" class="item-product__favourite _icon-favourite"></a>
+							<a href="#" class="item-product__picture-link">
+								<img src="img/product/similar/01.jpg" alt="image-01" class="item-product__image">
+							</a>
+							<div class="item-product__body">
+								<h4 class="item-product__title">
+									<a href="#" class="item-product__link-title">Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Impedit, dolore.</a>
+								</h4>
+								<div class="item-product__label">Explore Now!</div>
+								<div class="item-product__price">$77.00</div>
+							</div>
+						</article>
+						<article class="item-product">
+							<a href="#" class="item-product__favourite _icon-favourite"></a>
+							<a href="#" class="item-product__picture-link">
+								<img src="img/product/similar/02.jpg" alt="image-01" class="item-product__image">
+
+							</a>
+							<div class="item-product__body">
+								<h4 class="item-product__title">
+									<a href="#" class="item-product__link-title">Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Impedit, dolore.</a>
+								</h4>
+								<div class="item-product__label">Explore Now!</div>
+								<div class="item-product__price">$77.00</div>
+							</div>
+						</article>
+						<article class="item-product">
+							<a href="#" class="item-product__favourite _icon-favourite"></a>
+							<a href="#" class="item-product__picture-link">
+								<img src="img/product/similar/03.jpg" alt="image-01" class="item-product__image">
+
+							</a>
+							<div class="item-product__body">
+								<h4 class="item-product__title">
+									<a href="#" class="item-product__link-title">Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Impedit, dolore.</a>
+								</h4>
+								<div class="item-product__label">Explore Now!</div>
+								<div class="item-product__price">$77.00</div>
+							</div>
+						</article>
+						<article class="item-product">
+							<a href="#" class="item-product__favourite _icon-favourite"></a>
+							<a href="#" class="item-product__picture-link">
+								<img src="img/product/similar/04.jpg" alt="image-01" class="item-product__image">
+
+							</a>
+							<div class="item-product__body">
+								<h4 class="item-product__title">
+									<a href="#" class="item-product__link-title">Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Impedit, dolore.</a>
+								</h4>
+								<div class="item-product__label">Explore Now!</div>
+								<div class="item-product__price">$77.00</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__nav nav-footer">
+					<div data-open data-spollers="400, max" class="nav-footer__block spollers">
+						<details class="nav-footer__details spollers__item">
+							<summary class="nav-footer__title _icon-ch-down">
+								<h5>Need Help</h5>
+							</summary>
+							<ul class="nav-footer__list spollers__body">
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Contact Us</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Track Order</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Returns & Refunds</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">FAQ's</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Career</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+					<div data-open data-spollers="400, max" class="nav-footer__block spollers">
+						<details class="nav-footer__details">
+							<summary class="nav-footer__title _icon-ch-down">
+								<h5>Company</h5>
+							</summary>
+							<ul class="nav-footer__list">
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">About Us</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">euphoria Blog</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">euphoriastan</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Collaboration</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Media</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+					<div data-open data-spollers="400, max" class="nav-footer__block spollers">
+						<details class="nav-footer__details">
+							<summary class="nav-footer__title _icon-ch-down">
+								<h5>More Info</h5>
+							</summary>
+							<ul class="nav-footer__list">
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Term and Conditions</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Privacy Policy</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Shipping Policy</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Sitemap</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+					<div data-open data-spollers="400, max" class="nav-footer__block spollers">
+						<details class="nav-footer__details">
+							<summary class="nav-footer__title _icon-ch-down">
+								<h5>Location</h5>
+							</summary>
+							<ul class="nav-footer__list">
+								<li class="nav-footer__item">
+									<a href="mailto:support@euphoria.in"
+										class="nav-footer__link">support@euphoria.in</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Eklingpura Chouraha,
+										Ahmedabad Main Road</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">(NH 8- Near Mahadev Hotel)
+										Udaipur, India- 313002</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+				</div>
+				<div class="footer__contacts contacts-footer">
+					<div class="contacts-footer__social social-footer">
+						<a href="#" class="social-footer__item _icon-s-fb"></a>
+						<a href="#" class="social-footer__item _icon-s-inst"></a>
+						<a href="#" class="social-footer__item _icon-s-x"></a>
+						<a href="#" class="social-footer__item _icon-s-linkedin"></a>
+					</div>
+					<div class="contacts-footer__apps apps-footer">
+						<h5 class="apps-footer__title">Download The App</h5>
+						<div class="apps-footer__block">
+							<a href="#" class="apps-footer__item">
+								<img src="img/footer/google-play.svg" alt="Download app in Google Play Market">
+							</a>
+							<a href="#" class="apps-footer__item">
+								<img src="img/footer/app-store.svg" alt="Download app in App Store">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__faq faq-footer">
+					<div class="faq-footer__box">
+						<h5 data-spoller class="faq-footer__title">
+							<button class="faq-footer__button-title _icon-ch-down">Popular Categories</button>
+						</h5>
+						<div class="faq-footer__body">
+							<ul class="faq-footer__list">
+								<li class="faq-footer__item">
+									<a href="#" class="faq-footer__link">Contact Us</a>
+								</li>
+								<li class="faq-footer__item">
+									<a href="#" class="faq-footer__link">Track Order</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy">Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Підключення Swiper -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- Підключення JS-файлу з кодом -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>

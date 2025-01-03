@@ -1,0 +1,391 @@
+// HEADER ZERO-PAGE
+
+.header {
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__logo
+
+    &__logo {
+    }
+
+    // .header__form
+
+    &__form {
+    }
+
+    // .header__buttons
+
+    &__buttons {
+        display: flex;
+        @include adaptiveValue("column-gap", 30, 14);
+        row-gap: toRem(10);
+
+        a {
+            padding: toRem(12) toRem(48);
+            @include adaptiveValue("padding-top", 12, 8);
+            @include adaptiveValue("padding-bottom", 12, 8);
+            @include adaptiveValue("padding-left", 48, 24);
+            @include adaptiveValue("padding-right", 48, 24);
+
+            @media (max-width: toEm(556)) {
+                opacity: 0;
+
+                .menu-open & {
+                    transition: all 0.5s;
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media (max-width: toEm(556)) {
+            width: 0;
+            opacity: 0;
+
+            .menu-open & {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                bottom: toRem(15);
+                right: toRem(15);
+
+                width: auto;
+                opacity: 1;
+            }
+        }
+    }
+
+    // .header__login
+
+    &__login {
+    }
+
+    // .header__login--active
+
+    &__sign-up--not-active {
+        color: $purpleColor;
+        background-color: transparent;
+        border: toRem(1) solid $darkColor;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #eeeeee;
+            }
+        }
+    }
+
+    // .header__sign-up
+
+    &__sign-up {
+    }
+}
+.menu {
+    // .form-header__select
+
+    &__select {
+        max-width: toRem(206);
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+        column-gap: toRem(20);
+
+        &::after {
+            content: "";
+            background: url("../img/sign-in/arrow-down.svg") 0 0 / cover
+                no-repeat;
+            width: toRem(10);
+            height: toRem(5);
+            flex: 0 0 toRem(10);
+            display: inline-block;
+        }
+        select {
+            font-family: "Causten";
+            font-size: toRem(18);
+            color: #333333;
+            appearance: none; /* Для Safari */
+            -webkit-appearance: none; /* Для WebKit браузерів */
+            -moz-appearance: none; /* Для Firefox */
+        }
+
+        option {
+        }
+    }
+}
+.form-header {
+    .wrapper--zero-page & {
+        flex-grow: 1;
+        display: flex;
+        column-gap: toRem(10);
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .form-header__search
+
+    &__search {
+        flex: 0 1 toRem(144);
+        z-index: 5;
+        @media (max-width: toEm(767.98)) {
+            flex-grow: 1;
+        }
+    }
+
+    // .form-header__input
+
+    &__input {
+        border-radius: 0 toRem(8) toRem(8) 0;
+        background-color: $liteColor;
+    }
+
+    // .form-header__button
+
+    &__button {
+        border-radius: toRem(8) 0 0 toRem(8);
+        background-color: $liteColor;
+    }
+
+    &__menu {
+        @extend .header__menu;
+    }
+
+    // .form-header__buttons
+
+    &__buttons {
+        option {
+        }
+    }
+}
+
+// SIGN-IN
+
+.page {
+    // .page__sign-in
+
+    &__sign-in {
+    }
+}
+.sign-in {
+    // .sign-in__container
+
+    &__container {
+        @media (min-width: toEm(767.98)) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // .sign-in__image
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        margin-left: toRem(-15);
+
+        @media (max-width: toEm(767.98)) {
+            display: none;
+        }
+    }
+
+    // .sign-in__body
+
+    &__body {
+        @include adaptiveValue("padding-left", 77, 0, 0, $maxWidth, 767.98);
+        @include adaptiveValue("padding-top", 60, 30, 0, $maxWidth, 767.98);
+    }
+
+    // .sign-in__title
+
+    &__title {
+        font-family: "CoreSans", sans-serif;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 34, 26);
+        color: $darkColor;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 20);
+        }
+    }
+
+    // .sign-in__continue
+
+    &__continue {
+        &:not(:last-child) {
+            margin-bottom: toRem(50);
+        }
+    }
+
+    // .sign-in__sign
+
+    &__sign {
+        padding: toRem(17) toRem(20);
+        border: toRem(1) solid $darkColor;
+        border-radius: toRem(8);
+        color: $purpleColor;
+        font-weight: 500;
+        font-size: toRem(22);
+        width: 100%;
+        transition: all 0.3s;
+
+        display: inline-flex;
+        column-gap: toRem(12);
+        align-items: center;
+        justify-content: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $liteColor;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+
+        &::before {
+            content: "";
+            width: toRem(20);
+            height: toRem(20);
+        }
+
+        &--google {
+            &::before {
+                background: url("../img/sign-in/google.svg") 0 0 / cover
+                    no-repeat;
+            }
+        }
+        &--twitter {
+            &::before {
+                background: url("../img/sign-in/twitter.svg") 0 0 / cover
+                    no-repeat;
+            }
+        }
+    }
+    // .sign-in__form
+
+    &__form {
+    }
+
+    &__or {
+        text-align: center;
+        font-family: "CoreSans", sans-serif;
+        font-size: toRem(18);
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(50);
+        }
+
+        &::before {
+            content: "";
+            height: toRem(2);
+            width: 45%;
+            background-color: rgba(102, 102, 102, 0.25);
+            position: absolute;
+            top: toRem(8);
+            left: 0;
+        }
+        &::after {
+            content: "";
+            height: toRem(2);
+            width: 45%;
+            background-color: rgba(102, 102, 102, 0.25);
+            position: absolute;
+            top: toRem(8);
+            right: 0;
+        }
+    }
+}
+.form-sign {
+    // .form-sign__wrapper
+
+    &__wrapper {
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(10);
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .form-sign__label
+
+    &__label {
+        font-size: toRem(18);
+        color: $darkColor;
+    }
+
+    // .form-sign__input
+
+    &__input {
+        // padding: toRem(16);
+        padding: toRem(16) toRem(46) toRem(16) toRem(16);
+        border: toRem(1) solid $darkColor;
+        border-radius: toRem(8);
+        font-size: toRem(18);
+        color: $darkColor;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    &__hide-pass {
+        font-size: toRem(18);
+        color: #807d7e;
+        display: inline-flex;
+        align-items: center;
+        column-gap: toRem(15);
+    }
+
+    // .form-sign__forget
+
+    &__forget {
+        color: $darkColor;
+        display: block;
+        text-align: right;
+        text-decoration: underline;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // .form-sign__button-sign
+
+    &__button-sign {
+        padding: toRem(16) toRem(58);
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .form-sign__create
+
+    &__create {
+        color: $darkColor;
+        a {
+            text-decoration: underline;
+            transition: all 0.3s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: none;
+                    color: $purpleColor;
+                }
+            }
+        }
+    }
+}

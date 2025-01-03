@@ -1,0 +1,199 @@
+.page {
+    // .page__sign-up
+
+    &__sign-up {
+    }
+}
+.sign-up {
+    // .sign-up__container
+
+    &__container {
+        @extend .sign-in__container;
+    }
+
+    // .sign-up__image
+
+    &__image {
+        @extend .sign-in__image;
+    }
+
+    // .sign-up__body
+
+    &__body {
+        @extend .sign-in__body;
+    }
+
+    // .sign-up__title
+
+    &__title {
+        @extend .sign-in__title;
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .sign-up__text
+
+    &__text {
+        font-weight: 500;
+        color: rgba(102, 102, 102, 0.8);
+        line-height: 1.2;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+        }
+    }
+
+    // .sign-up__continue
+
+    &__continue {
+        @extend .sign-in__continue;
+    }
+
+    // .sign-up__sign
+
+    &__sign {
+        @extend .sign-in__sign;
+        &::before {
+            content: "";
+            width: toRem(20);
+            height: toRem(20);
+        }
+
+        &--google {
+            &::before {
+                background: url("../img/sign-in/google.svg") 0 0 / cover
+                    no-repeat;
+            }
+        }
+        &--twitter {
+            &::before {
+                background: url("../img/sign-in/twitter.svg") 0 0 / cover
+                    no-repeat;
+            }
+        }
+    }
+
+    // .sign-up__sign--google
+
+    &__sign--google {
+    }
+
+    // .sign-up__sign--twitter
+
+    &__sign--twitter {
+    }
+
+    // .sign-up__form
+
+    &__form {
+    }
+}
+.form-sign {
+    // .form-sign__wrapper
+
+    &__wrapper {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+        }
+    }
+
+    // .form-sign__header
+
+    &__header {
+    }
+
+    // .form-sign__label
+
+    &__label {
+    }
+
+    // .form-sign__input
+
+    &__input {
+    }
+
+    // .form-sign__error-msg
+
+    &__error-msg {
+        color: #ee1d52;
+    }
+
+    // .form-sign__hide-pass
+
+    &__hide-pass {
+    }
+
+    // .form-sign__rule-password
+
+    &__rule-password {
+        font-weight: 500;
+        color: #807d7e;
+        line-height: 1.2;
+    }
+
+    // .form-sign__checkbox
+
+    &__checkbox {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(18);
+        }
+    }
+
+    // .form-sign__square
+
+    &__square {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:focus-visible + label {
+            outline: toRem(1) solid $darkColor;
+        }
+
+        &:checked + label::before {
+            background: url("../img/checkout/checked.svg") 0 0 / cover no-repeat;
+        }
+    }
+
+    // .form-sign__content
+
+    &__content {
+        font-weight: 500;
+
+        display: inline-flex;
+        align-items: center;
+        column-gap: toRem(10);
+        cursor: pointer;
+        color: #807d7e;
+        font-size: toRem(18);
+
+        &::before {
+            content: "";
+            width: toRem(18);
+            height: toRem(18);
+            flex: 0 0 toRem(18);
+            background-color: transparent;
+            border: toRem(1.8) solid #bebcbd;
+            border-radius: toRem(2);
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    // .form-sign__button-sign
+
+    &__button-sign {
+    }
+
+    // .form-sign__create
+
+    &__create {
+    }
+}

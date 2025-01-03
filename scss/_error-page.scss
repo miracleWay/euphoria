@@ -1,0 +1,61 @@
+.page {
+    // .page__error
+
+    &__error {
+    }
+}
+.error {
+    // .error__container
+
+    &__container {
+    }
+
+    &__content {
+        margin: 0 auto;
+        text-align: center;
+        max-width: toRem(415);
+        @include adaptiveValue("padding-top", 80, 30);
+        @include adaptiveValue("padding-bottom", 80, 30);
+    }
+
+    // .error__image
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    // .error__title
+
+    &__title {
+        font-family: "CoreSans", sans-serif;
+        font-weight: 700;
+        color: #000;
+        @include adaptiveValue("font-size", 34, 24);
+        &:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .error__text
+
+    &__text {
+        font-weight: 500;
+        p {
+            line-height: 1.2;
+            &:not(:last-child) {
+                margin-bottom: toRem(10);
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+        }
+    }
+
+    // .error__link
+
+    &__link {
+        padding: toRem(12) toRem(48);
+    }
+}

@@ -1,0 +1,303 @@
+.page {
+    // .page__wishlist
+
+    &__wishlist {
+    }
+
+    // .page__breadcrumbs
+
+    &__breadcrumbs {
+    }
+
+    // .page__container
+
+    &__container {
+    }
+
+    // .page__container--grid
+
+    &__container--grid {
+        .wrapper--empty-wishlist & {
+            gap: toRem(126);
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 100, 60);
+            }
+        }
+    }
+
+    // .page__account
+
+    &__account {
+    }
+
+    // .page__empty-wishlist
+
+    &__empty-wishlist {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 100, 60);
+        }
+    }
+
+    // .page__recently-viewed
+
+    &__recently-viewed {
+    }
+}
+
+// WISHLIST
+.wishlist {
+    color: $darkColor;
+
+    // .wishlist__title
+
+    &__title {
+        font-family: "CoreSans", sans-serif;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 28, 20);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 20);
+        }
+    }
+
+    // .wishlist__items
+
+    &__items {
+        @media (max-width: toEm(767.98)) {
+            overflow: auto;
+            margin-right: toRem(-15);
+        }
+    }
+
+    // .wishlist__item
+
+    &__item {
+        border-bottom: toRem(1) solid #edeef2;
+        padding-bottom: toRem(30);
+        &:not(:first-child) {
+            padding-top: toRem(30);
+        }
+    }
+}
+.item-wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("column-gap", 40, 0, 0, $containerWidth, 991.98);
+    // column-gap: toRem(10);
+    @media (max-width: toEm(767.98)) {
+        min-width: toRem(767.98);
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue(
+            "column-gap",
+            36,
+            16,
+            0,
+            $containerWidth,
+            991.98
+        );
+    }
+
+    &__right {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        @include adaptiveValue(
+            "column-gap",
+            50,
+            20,
+            0,
+            $containerWidth,
+            991.98
+        );
+    }
+
+    // .item-wishlist__delete-button
+
+    &__delete-button {
+        flex: 0 0 toRem(16);
+        height: toRem(16);
+        width: toRem(16);
+        position: relative;
+
+        @media (any-hover: hover) {
+            &:hover::after,
+            &:hover::before {
+                background-color: #000;
+            }
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: toRem(1);
+            height: toRem(16);
+            border-radius: toRem(1);
+            background-color: $darkColor;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    // .item-wishlist__image
+
+    &__image {
+        flex: 0 0 toRem(110);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            border-radius: toRem(8);
+        }
+    }
+
+    // .item-wishlist__description
+
+    &__description {
+        display: grid;
+        gap: toRem(14);
+    }
+
+    // .item-wishlist__name
+
+    &__name {
+        font-weight: 700;
+        font-size: toRem(22);
+        // max-width: toRem(315);
+
+        a {
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // .item-wishlist__color
+
+    &__color {
+        font-weight: 700;
+        font-size: toRem(22);
+        span {
+            font-weight: 400;
+            color: $mainColor;
+        }
+    }
+
+    // .item-wishlist__quantity
+
+    &__quantity {
+        @extend .item-wishlist__color;
+    }
+
+    // .item-wishlist__price
+
+    &__price {
+        font-weight: 700;
+        font-size: toRem(22);
+        color: $mainColor;
+    }
+
+    // .item-wishlist__add-button
+
+    &__add-button {
+        flex: 0 0 toRem(145);
+        padding: toRem(14) toRem(28);
+    }
+}
+
+// EMPTY WISHLIST
+
+.empty-wishlist {
+    @include adaptiveValue("padding-top", 78, 38);
+    @include adaptiveValue("padding-bottom", 78, 38);
+    @include adaptiveValue("padding-left", 116, 22);
+    @include adaptiveValue("padding-right", 116, 22);
+    // padding: toRem(78) toRem(116);
+    text-align: center;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05),
+        -2px -2px 4px 0 rgba(0, 0, 0, 0.05);
+    max-width: toRem(693);
+    margin-inline: auto;
+
+    // .empty-wishlist__image
+
+    &__image {
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #f0f9f4;
+        // padding: toRem(54);
+        @include adaptiveValue("padding", 54, 24);
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 20);
+        }
+        &::before {
+            font-size: toRem(62);
+            color: #28a642;
+        }
+    }
+
+    // .empty-wishlist__title
+
+    &__title {
+        font-family: "CoreSans", sans-serif;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 34, 24);
+        color: $darkColor;
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+
+    // .empty-wishlist__text
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: toRem(42);
+        }
+        p {
+            font-weight: 500;
+            line-height: 1.25;
+        }
+    }
+
+    // .empty-wishlist__link
+
+    &__link {
+    }
+}
+
+// RECENTLY
+
+.recently-viewed {
+    // .recently-viewed__container
+
+    &__container {
+    }
+
+    // .recently-viewed__title
+
+    &__title {
+    }
+
+    // .recently-viewed__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(toRem(220), 1fr));
+        @include adaptiveValue("gap", 50, 20);
+    }
+}
